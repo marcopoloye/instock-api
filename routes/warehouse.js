@@ -129,7 +129,6 @@ router.put('/warehouses/:warehouseId', (req, res) => {
     //Store warehouse data in warehouse array
     const warehouseArr = readWarehouses();
 
-    let foundWarehouse = {};
     let foundIndex = 0;
 
      //Check if warehouse exists

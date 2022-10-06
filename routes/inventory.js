@@ -110,32 +110,7 @@ router.delete('/inventories/:inventoryId', (req, res) => {
 router.put('/inventories/:inventoryId', (req, res)=> {
 
      //Storing inventory file in an array
-     const inventoryArr = readInventories();
-
-
-    // //Check if status is either out of stock or in stock
-    // if (
-    //     req.body.status !== "In Stock" && req.body.status !== "Out of Stock"
-    // ) {
-    //     // console.log(req.body.status);
-    //     res.status(400).send("Status must be either In Stock or Out of Stock");
-    //     return;
-    // }
-
-    // //Check if the quantity is correct
-    // if (req.body.status === "In Stock" && req.body.quantity < 1) {
-    //     res.status(400).send("The status is In Stock but the quantity is not greater than 0.");
-    //     return;
-    // }
-
-    //   //Check if the quantity is correct
-    // if (req.body.status === "Out of Stock" && req.body.quantity !== 0) {
-    //     res.status(400).send("The status is Out of Stock but the quantity is not equal to 0.");
-    //     return;
-    // }
-
-  
-    
+     const inventoryArr = readInventories();  
 
     //Find the inventory item and update it
      inventoryArr.forEach( (item,i) => {
